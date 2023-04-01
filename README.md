@@ -1,6 +1,5 @@
 # YapeChallenge
 
-##   ----  NOTAS CHALLENGE ----
 ##  **** ACLARACIÓN ****
 	Para el correcto funcionamiento del mapa, se debe agregar la clave api en el archico "local.properties" en la sección de "Gradle Scripts" 
 	reemplazando el valor "YOUR_API_KEY" por el valor de su clave api. Ej: GOOGLE_MAPS_API_KEY = azJhtYoijgR3JhlHp7
