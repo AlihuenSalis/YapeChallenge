@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menu_list_Fragment">
+
+    <fragment
+        android:id="@+id/menu_list_Fragment"
+        android:name="com.example.yapechallenge.ui.view.fragments.MenuListFragment"
+        android:label="@string/menu_list"
+        tools:layout="@layout/fragment_menu_list">
+        <action
+            android:id="@+id/action_menuListFragment_to_menuDetail_Fragment"
+            app:destination="@id/menu_detail_Fragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/slide_in"
+            app:popUpToInclusive="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/menu_detail_Fragment"
+        android:name="com.example.yapechallenge.ui.view.fragments.MenuDetailFragment"
+        android:label="@string/title_menu_detail"
+        tools:layout="@layout/fragment_menu_detail">
+        <action
+            android:id="@+id/action_menuDetailFragment_to_menuList_Fragment"
+            app:destination="@id/menu_list_Fragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_menuDetail_Fragment_to_mapFragment"
+            app:destination="@id/map_Fragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out" />
+        <argument
+            android:name="menu"
+            app:argType="com.example.yapechallenge.domain.model.Menu" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/map_Fragment"
+        android:name="com.example.yapechallenge.ui.view.fragments.MapFragment"
+        android:label="@string/title_map_fragment"
+        tools:layout="@layout/fragment_map">
+        <action
+            android:id="@+id/action_mapFragment_to_menuDetail_Fragment"
+            app:destination="@id/menu_detail_Fragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+
+        <argument
+            android:name="menu"
+            app:argType="com.example.yapechallenge.domain.model.Menu" />
+    </fragment>
+
+</navigation>

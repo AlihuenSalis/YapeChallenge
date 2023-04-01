@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/dialog_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_alert_dialog"
+        android:layout_marginBottom="@dimen/top_margin_alert_dialog"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin_alert_dialog"
+            android:gravity="center_horizontal"
+            android:text="@string/alert_title"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_title_alert_dialog"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dialog_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/middle_margin"
+            android:layout_marginTop="@dimen/middle_margin"
+            android:layout_marginEnd="@dimen/middle_margin"
+            android:layout_marginBottom="@dimen/top_margin_alert_dialog"
+            android:gravity="center_horizontal"
+            android:text="@string/alert_message"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/lbl_text_dimen_medium"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/img_dialog_view"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/rounded_shape"
+        android:contentDescription="@string/img_alert_dialog"
+        android:padding="@dimen/min_margin"
+        android:src="@drawable/ic_check"
+        app:layout_constraintBottom_toTopOf="@id/dialog_linear"
+        app:layout_constraintEnd_toEndOf="@id/dialog_linear"
+        app:layout_constraintStart_toStartOf="@id/dialog_linear"
+        app:layout_constraintTop_toTopOf="@+id/dialog_linear" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="@dimen/top_margin_alert_dialog"
+        android:layout_marginEnd="@dimen/top_margin_alert_dialog"
+        android:backgroundTint="@color/red"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/accept"
+        android:textAllCaps="false"
+        android:textSize="@dimen/lbl_title_dimen_medium"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_linear"
+        app:layout_constraintEnd_toEndOf="@id/dialog_linear"
+        app:layout_constraintStart_toStartOf="@id/dialog_linear"
+        app:layout_constraintTop_toBottomOf="@id/dialog_linear" />
+</androidx.constraintlayout.widget.ConstraintLayout>

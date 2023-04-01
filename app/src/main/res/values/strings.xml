@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">YapeChallenge</string>
+    <string name="menu_list">Listado de recetas</string>
+    <string name="menu_map">Origen de la receta</string>
+    <string name="menu_img">imagen menu</string>
+    <string name="search">Buscar</string>
+    <string name="title_menu_detail">Detalle de la receta</string>
+    <string name="alert_title">Error</string>
+    <string name="alert_message">Algo salió mal. Por favor, verifique su conexión a internet y/o intente nuevamente mas tarde.</string>
+    <string name="img_alert_dialog">imagen alert dialog</string>
+    <string name="accept">Aceptar</string>
+    <string name="location">Ver ubicación</string>
+    <string name="title_map_fragment">Map Fragment</string>
+    <string name="lbl_ingredient">Ingredientes:</string>
+    <string name="lbl_description">Descripción</string>
+</resources>

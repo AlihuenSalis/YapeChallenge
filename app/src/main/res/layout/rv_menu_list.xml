@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/inside_margin"
+    android:layout_marginVertical="@dimen/min_margin"
+    app:cardElevation="@dimen/min_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_shape_recycler_item"
+        android:paddingVertical="@dimen/min_margin">
+
+        <ImageView
+            android:id="@+id/img_menu"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_margin="@dimen/min_margin"
+            android:background="@color/white"
+            android:contentDescription="@string/menu_img"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_block"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linear_content_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linear_content_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginStart="@dimen/inside_margin"
+            android:layout_marginTop="@dimen/inside_margin"
+            android:layout_marginEnd="@dimen/min_margin"
+            android:gravity="start"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_menu"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_menu_name"
+                style="@style/txtTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/min_margin"
+                android:ellipsize="end"
+                android:textSize="@dimen/lbl_title_dimen_medium"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap"
+                tools:text="Nombre Menú" />
+
+            <TextView
+                android:id="@+id/lbl_ingredient"
+                style="@style/txtTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/min_margin"
+                android:ellipsize="end"
+                android:text="@string/lbl_ingredient"
+                android:textSize="@dimen/lbl_text_dimen_medium"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/txt_ingredient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/min_margin"
+                android:layout_marginStart="@dimen/min_margin"
+                android:layout_marginEnd="@dimen/min_margin"
+                android:ellipsize="end"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/lbl_text_dimen_medium"
+                android:textStyle="normal"
+                tools:ignore="RelativeOverlap"
+                tools:text="ingredientes" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+
